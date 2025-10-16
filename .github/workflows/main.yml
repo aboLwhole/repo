@@ -12,5 +12,5 @@ jobs:
     needs: my-job
     runs-on: ubuntu-latest
     steps:
-        - name: run-second-job
-           run: echo " Job 2 started because Job 1 finished successfully!"
+      - name: run-second-job
+        run: echo " Job 2 started because Job 1 finished successfully!"
