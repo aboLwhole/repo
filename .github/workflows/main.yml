@@ -1,0 +1,16 @@
+name: hello-world
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
+      - name: my-step-number-2
+        run: echo "Hello Github!"
+  job2:
+    needs: my-job
+    runs-on: ubuntu-latest
+    steps:
+        - name: run-second-job
+           run: echo " Job 2 started because Job 1 finished successfully!"
